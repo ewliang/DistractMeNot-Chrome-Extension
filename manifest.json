@@ -21,6 +21,8 @@
     ]
   },
   "browser_action": {
-    "default_icon": "logo.png"
+    "default_icon": "logo.png",
+    "default_popoup": "popup.html",
+    "default_title": "Auto close tabs of URLs that you find distracting."
   }
 }
