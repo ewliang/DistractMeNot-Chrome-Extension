@@ -3,8 +3,8 @@ A basic productivity Chrome Extension that allows users to input a list of site(
 
 # Author
 Eric Liang
-Website: [https://www.eric-liang.com](https://www.eric-liang.com)
-Github: [https://www.github.com/ewliang](https://www.github.com/ewliang)
+- Website: [https://www.eric-liang.com](https://www.eric-liang.com)
+- Github: [https://www.github.com/ewliang](https://www.github.com/ewliang)
 
 # Requirements
 - Google Chrome Browser
