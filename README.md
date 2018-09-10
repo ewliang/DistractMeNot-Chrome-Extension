@@ -9,6 +9,10 @@ I made it because I find myself wasting time on some sites sometimes on a daily 
 - Website: [https://www.eric-liang.com](https://www.eric-liang.com)
 - Github: [https://www.github.com/ewliang](https://www.github.com/ewliang)
 
+# Repository
+- Github [https://github.com/ewliang/DistractMeNot-Chrome-Extension](https://github.com/ewliang/DistractMeNot-Chrome-Extension)
+- Clone Link [https://github.com/ewliang/DistractMeNot-Chrome-Extension.git](https://github.com/ewliang/DistractMeNot-Chrome-Extension.git)
+
 # Requirements
 - Google Chrome Browser
 
