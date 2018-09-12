@@ -13,16 +13,18 @@
   <head>
     <meta charset="utf-8">
     <title>DistractMeNot Chrome Extension</title>
+    <link href = "style.css" rel = "stylesheet" type = "text/css">
   </head>
   <body>
     <h1>DistractMeNot</h1>
-    <form>
+    <form class = "urlInputForm">
       <input type = "url" id = "urlInput" placeholder = "" required>
       <input type = "submit" id = "addURLButton" value = "Add">
     </form>
     <input type = "checkbox" id = "toggleActivation">
     <label for = "toggleActivation">Is Active?</label>
     <button id = "resetButton">Reset</button>
+    <footer>Created by <a href = "https://www.eric-liang.com">Eric Liang</a></footer>
     <script src = "popup.js"></script>
   </body>
 </html>
