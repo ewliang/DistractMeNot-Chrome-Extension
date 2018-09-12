@@ -1,0 +1,33 @@
+* {
+  max-width: 100%;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  min-width: 360px;
+  max-width: 480px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
