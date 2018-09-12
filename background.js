@@ -9,20 +9,7 @@ var params = {
     If detected, close the window.
 */
 var urlBlacklist = [];
-chrome.tabs.onUpdated.addListener(function() {
-  chrome.tabs.query(params, function(tabs) {
-    console.log("DistractMeNot Background Inspect Console");
-    for(let i = 0; i < tabs.length; i++) {
-      if(tabs[i].url.includes("https://myspace.com")) {
-        let matchedURL = tabs[i].url;
-        console.log("FOUND A MATCH!: " + matchedURL);
-        chrome.tabs.remove(tabs[i].id, function() {
-          console.log("REMOVED: " + matchedURL);
-        });
-      }
-    }
-  });
-});
+
 
 /*
   Receive User Input from Popup.html
@@ -36,4 +23,22 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   urlBlacklist.push(request.url);
   console.log(urlBlacklist);
   sendResponse({ backendMessage: "Successfully Added: " + request.url });
+  chrome.tabs.onUpdated.addListener(function() {
+    chrome.tabs.query(params, tabRemover);
+  });
 });
+
+function tabRemover(tabs) {
+  console.log("DistractMeNot Background Inspect Console");
+  for(let i = 0; i < tabs.length; i++) {
+    for(let j = 0; j < urlBlacklist.length; j++) {
+      if(tabs[i].url.includes(urlBlacklist[j])) {
+        let matchedURL = tabs[i].url;
+        console.log("FOUND A MATCH!: " + matchedURL);
+        chrome.tabs.remove(tabs[i].id, function() {
+          console.log("REMOVED: " + matchedURL);
+        });
+      }
+    }
+  }
+}
