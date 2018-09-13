@@ -17,12 +17,12 @@ var urlBlacklist = [];
   To load existing urlBlacklist from localStorage into local urlBlacklist array if conditions met
   on browser load.
 */
-if(window.localStorage && (JSON.parse(localStorage.getItem("urlBlacklist")) != null)) {
+if(window.localStorage && (JSON.parse(window.localStorage.getItem("urlBlacklist")) != null)) {
   // Browser supports localStorage and urlBlacklist already exists with items.
   // Set localStorageSupport to true.
   // Load existing urlBlacklist URLs into urlBlacklist array.
   localStorageSupport = true;
-  urlBlacklist = JSON.parse(localStorage.getItem("urlBlacklist"));
+  urlBlacklist = JSON.parse(window.localStorage.getItem("urlBlacklist"));
   console.log("Loaded Existing URL Blacklist: " + urlBlacklist);
 }
 
@@ -34,12 +34,21 @@ if(window.localStorage && (JSON.parse(localStorage.getItem("urlBlacklist")) != n
   close any tabs that are on the blacklist.
 */
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+  // Reset URL Blacklist
+  if(request.reset) {
+    // If localStorage supported, clear urlBlacklist from localStorage.
+    if(window.localStorage) {
+      window.localStorage.removeItem("urlBlacklist");
+    }
+    // Clear local urlBlacklist
+    urlBlacklist = [];
+  }
   // Update urlBlacklist with new URL.
   if(window.localStorage) {
     // Browser supports localStorage.
     // Store blacklist in localStorage.
     urlBlacklist.push(request.url);
-    localStorage.setItem('urlBlacklist', JSON.stringify(urlBlacklist));
+    window.localStorage.setItem('urlBlacklist', JSON.stringify(urlBlacklist));
   } else {
     // Browser doesn't support localStorage.
     // Store blacklist in array.
@@ -63,7 +72,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 function tabRemover(tabs) {
   console.log("DistractMeNot Background Inspect Console");
   if(localStorageSupport) {
-    urlBlacklist = JSON.parse(localStorage.getItem("urlBlacklist"));
+    urlBlacklist = JSON.parse(window.localStorage.getItem("urlBlacklist"));
   }
   for(let i = 0; i < tabs.length; i++) {
     for(let j = 0; j < urlBlacklist.length; j++) {

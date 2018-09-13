@@ -16,3 +16,9 @@ addURLButton.onclick = function() {
     console.log(response.backendMessage);
   });
 };
+
+resetButton.onclick = function() {
+  chrome.runtime.sendMessage({ reset: true }, function(response) {
+    console.log(response.backendMessage);
+  });
+};
