@@ -20,19 +20,19 @@
   <body>
     <h1>DistractMeNot</h1>
     <p>
-      To get started, simply just type in a URL with (http or https) and hit [Enter] or click "Add".
+      To get started, simply type in a URL with (http or https) and hit [Enter] or click "Add".
       Once you make an update to your tab, the program will start working.
     </p>
-    <form class = "flex-row">
-      <input type = "url" id = "urlInput" placeholder = "" required>
-      <input type = "submit" id = "addURLButton" value = "Add">
+    <form class = "flex-column">
+      <input type = "url" id = "urlInput" placeholder = "(e.g. https://www.example.com)" required>
+      <input type = "submit" class = "btn-primary" id = "addURLButton" value = "Add To Blacklist">
     </form>
-    <small class = "flex-row">
+    <small class = "flex-row toggle-activation-wrapper">
       <input type = "checkbox" id = "toggleActivation">
       <label for = "toggleActivation">Is Active?</label>
     </small>
     <button id = "resetButton">Reset</button>
-    <footer>Created by <a href = "https://www.eric-liang.com">Eric Liang</a></footer>
+    <footer><small>Created by <a href = "https://www.eric-liang.com">Eric Liang</a></small></footer>
     <script src = "popup.js"></script>
   </body>
 </html>
