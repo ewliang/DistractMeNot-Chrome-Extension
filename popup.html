@@ -18,20 +18,24 @@
     <link href = "style.css" rel = "stylesheet" type = "text/css">
   </head>
   <body>
-    <h1>DistractMeNot</h1>
+    <header>
+      <h1>DistractMeNot</h1>
+    </header>
     <p>
-      To get started, simply type in a URL with (http or https) and hit [Enter] or click "Add".
+      To get started, simply type in a URL with (http or https) and hit [Enter] or click "Add To Blacklist".
       Once you make an update to your tab, the program will start working.
     </p>
-    <form class = "flex-column">
-      <input type = "url" id = "urlInput" placeholder = "(e.g. https://www.example.com)" required>
-      <input type = "submit" class = "btn-primary" id = "addURLButton" value = "Add To Blacklist">
-    </form>
     <small class = "flex-row toggle-activation-wrapper">
       <input type = "checkbox" id = "toggleActivation">
       <label for = "toggleActivation">Is Active?</label>
     </small>
-    <button id = "resetButton">Reset</button>
+    <form class = "flex-column">
+      <input type = "url" id = "urlInput" placeholder = "(e.g. https://www.example.com)" required>
+      <div class = "flex-row">
+        <button class = "btn-neutral" id = "resetButton">Reset</button>
+        <input type = "submit" class = "btn-primary" id = "addURLButton" value = "Add To Blacklist">
+      </div>
+    </form>
     <footer><small>Created by <a href = "https://www.eric-liang.com">Eric Liang</a></small></footer>
     <script src = "popup.js"></script>
   </body>

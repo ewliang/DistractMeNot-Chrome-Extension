@@ -4,14 +4,16 @@
 
 html {
   font-size: 100%;
+  padding: 5%;
 }
 
 body {
+  color: #6a737d;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1;
   min-width: 360px;
-  max-width: 480px;
+  max-width: 480px !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -23,8 +25,9 @@ a {
 }
 
 p {
+  color: #6a737d;
   font-size: 0.857142857rem;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 .flex-row {
@@ -37,15 +40,30 @@ p {
   flex-direction: column;
 }
 
+header {
+  color: #0288D1;
+}
+
 h1 {
-  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0px 0px 15px 0px;
 }
 
 .btn-primary {
+  width: 100%;
   color: #fff;
   background-color: #0288D1;
   padding: 10px 25px;
   border: 0px;
+  border-radius: 5px;
+}
+
+.btn-neutral {
+  width: 100%;
+  background-color: #eee;
+  padding: 10px 25px;
+  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
@@ -58,13 +76,19 @@ input::placeholder {
 
 input[type = "url"] {
   font-size: 1rem;
+  height: 25px;
   background-color: #f2f2f2;
   padding: 5px;
   border: 0px;
+  border-radius: 5px;
 }
 
 .toggle-activation-wrapper {
   margin: 3% 0;
+}
+
+form {
+  margin: 10px 0;
 }
 
 footer {
