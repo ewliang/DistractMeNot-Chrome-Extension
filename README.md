@@ -3,27 +3,39 @@ A basic productivity Chrome Extension that allows users to input a list of site(
 
 ![](https://www.eric-liang.com/_nuxt/img/distractmenot-chrome-extension-design.1492eaf.jpg)
 
-## Features
+# Table of Contents
+- [Features](#features)
+- [Why I Made This](#why-i-made-this)
+- [Author](#author)
+- [Repository](#repository)
+- [Requirements](#requirements)
+- [How to Use](#how-to-use)
+  + [End User](#end-user)
+  + [Developer](#developer)
+- [License](#license)
+
+# Features
 - Multiple URL blacklisting
 - Automatic blacklisted URLs tab detection and removal (closing tabs)
 - Data persists on next browser window session
 
-## Why I Made This
+# Why I Made This
 I made it because I find myself wasting time on some sites sometimes on a daily basis, and I wanted a free, lightweight tool to automatically close the windows for me whenever I visit those sites (e.g. Discord, Agar.io, etc.) without having to permanently block those sites via parental control tools. I'm confident enough to have enough self discipline where I won't need a lock mechanism on this plugin so I kept it simple.
 
-## Author
+# Author
 **Eric Liang**
 - Website: [https://www.eric-liang.com](https://www.eric-liang.com)
 - Github: [https://www.github.com/ewliang](https://www.github.com/ewliang)
 
-## Repository
+# Repository
 - Github [https://github.com/ewliang/DistractMeNot-Chrome-Extension](https://github.com/ewliang/DistractMeNot-Chrome-Extension)
 - Clone Link [https://github.com/ewliang/DistractMeNot-Chrome-Extension.git](https://github.com/ewliang/DistractMeNot-Chrome-Extension.git)
 
-## Requirements
+# Requirements
 - Google Chrome Browser
 
-## How to Use DistractMeNot Chrome Extension As An End User
+# How to Use
+## End User
 1. Install it.
 2. Click on the DistractMeNot logo located on your browser.
 3. Enter 1 URL at a time into the input box while pressing [Enter] after each entry or clicking the "Add" button.
@@ -31,7 +43,7 @@ I made it because I find myself wasting time on some sites sometimes on a daily 
 5. The next time you restart your browser, any URLs entered from the previous session will be automatically loaded in since they're stored in your browser's localStorage.
 6. Just keep on browsing productively as usual! If you want more URLs to blacklist, just repeat Step 3.
 
-## How to Use DistractMeNot As A Chrome Extension Developer
+## Developer
 1. Make a clone of this project, unzipped.
 2. Open Chrome Browser
 3. In a new or blank tab, type in "chrome://extensions/" (without the quotes of course) and click [Enter].
@@ -40,6 +52,6 @@ I made it because I find myself wasting time on some sites sometimes on a daily 
 6. Navigate to your unzipped project folder and select that and hit OK.
 7. You are now ready to start working on the extension! Just make sure you reload after each change you make to see the changes take place.
 
-## License
+# License
 MIT License
 Please refer to License.md for more details.
